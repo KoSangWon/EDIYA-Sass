@@ -813,6 +813,129 @@ button {
   }
 }
 
+.footer {
+  background: #0f0f0f;
+  color: #878787;
+  font-size: 0.75rem;
+  padding-bottom: 2.5em;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    position: relative;
+  }
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.5);
+  }
+}
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .footer__inner {
+    width: 768px;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.footer__logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+  .footer__logo {
+    width: 160px;
+    height: 16px;
+    margin-top: 1.5625em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    width: 180px;
+    height: 18px;
+    margin-top: 1.875em;
+  }
+}
+.footer__logo img {
+  width: 100%;
+  height: auto;
+}
+
+.privacy {
+  order: -1;
+}
+@media screen and (max-width: 767px) {
+  .privacy {
+    padding: 0.625em 1.125em;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.5);
+  }
+}
+@media screen and (min-width: 768px) {
+  .privacy {
+    padding: 1.125em 0;
+  }
+}
+.privacy__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.privacy__link {
+  display: block;
+  padding: 0.125em 0.25em;
+  margin: 0.25em;
+}
+.privacy__link:focus {
+  outline: 0;
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px rgba(91, 106, 169, 0.8);
+}
+.privacy__link:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+.address {
+  text-align: center;
+  margin-top: 1.0625em;
+  line-height: 1.6;
+}
+.address__content {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 11px;
+}
+.address__content:first-child, .address__content:last-child {
+  margin-right: 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.6875rem;
+  line-height: 1.6;
+}
+@media screen and (max-width: 767px) {
+  .copyright {
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .copyright {
+    margin-top: 20px;
+  }
+}
+
 /* @media 동작 체크 */
 /* rem, em 동작 체크 */
 
