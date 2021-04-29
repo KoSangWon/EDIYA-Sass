@@ -523,6 +523,8 @@ template {
   margin: -1px;
 }
 
+/* 반응형 이미지(비트맵) */
+/* 반응형 미디어(벡터, 비디오, iframe) */
 html {
   font-size: 16px;
   overflow-y: visible;
@@ -593,6 +595,78 @@ legend {
 
 button {
   cursor: pointer;
+}
+
+.ediya {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+}
+.main {
+  flex: 1 1 0;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.header {
+  padding: 2px 0;
+  background: #fefefe;
+  border: 1px solid #f5f5f5;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.header__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .header__inner {
+    width: 740px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.header__logo {
+  background-color: yellow;
+  width: 176px;
+}
+@media screen and (max-width: 767px) {
+  .header__logo {
+    width: 46.9333333333%;
+    /* 너무 많이 늘어나는것 방지 */
+    max-width: 176px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    position: relative;
+    left: 1.125em;
+  }
+}
+.header__logo a {
+  display: block;
+  padding: 1.125em;
+}
+.header__logo img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .buttonBurger {
+    display: none;
+  }
 }
 
 /* @media 동작 체크 */
